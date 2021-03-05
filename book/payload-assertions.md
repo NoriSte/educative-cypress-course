@@ -167,13 +167,20 @@ Let's assert about the payloads: we could chain assertions (the same we did with
 
 ```diff
 it("The happy path should work", () => {
++   const random = Math.floor(Math.random() * 100000);
++   const user = {
++     username: `Tester${random}`,
++     email: `user+${random}@realworld.io`,
++     password: "mysupersecretpassword"
++   };
+
     // set up AJAX call interception
     cy.intercept("POST", "**/api/users").as("signup-request");
 
     cy.visit(paths.register);
 
     // form filling
-    const random = Math.floor(Math.random() * 100000);
+-   const random = Math.floor(Math.random() * 100000);
     cy.findByPlaceholderText(strings.username).type(`Tester${random}`);
     cy.findByPlaceholderText(strings.email).type(`user+${random}@realworld.io`);
     cy.findByPlaceholderText(strings.password).type("mysupersecretpassword");
