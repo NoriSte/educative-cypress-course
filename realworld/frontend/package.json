@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "cross-env": "7.0.2",
-    "react-scripts": "3.4.4",
+    "react-scripts": "4.0.3",
     "nan": "2.14.2"
   },
   "dependencies": {
