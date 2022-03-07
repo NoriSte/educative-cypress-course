@@ -8,7 +8,7 @@
     "nan": "2.14.2"
   },
   "dependencies": {
-    "history": "5.0.0",
+    "history": "5.3.0",
     "marked": "1.2.2",
     "prop-types": "15.7.2",
     "react": "17.0.1",
